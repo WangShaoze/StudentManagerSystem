@@ -18,7 +18,7 @@ public class Main {
                     break;
                 case "2":
                     // 查询所有员工
-                    searchAll(employees, scanner);
+                    searchAll(employees);
                     break;
                 case "3":
                     // 查询个人员工信息
@@ -87,7 +87,7 @@ public class Main {
         return index;
     }
 
-    public static void searchAll(ArrayList<Employee> employees, Scanner scanner) {
+    public static void searchAll(ArrayList<Employee> employees) {
         // 查询所有员工
         System.out.println("编号\t\t姓名\t\t\t年龄");
         for (Employee e:
