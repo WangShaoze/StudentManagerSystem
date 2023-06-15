@@ -1,3 +1,0 @@
-001,xiowang,23
-002,xioPo,22
-003,xiohua,23

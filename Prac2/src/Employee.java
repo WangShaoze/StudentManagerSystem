@@ -1,14 +1,17 @@
 public class Employee {
     private String id;
     private String name;
-    private String age;
+    private int age;
 
     public Employee() {
     }
 
-    public Employee(String id, String name, String age) {
+    public Employee(String id, String name, int age) {
         this.id = id;
         this.name = name;
+        if (age<18){
+            age = 18;
+        }
         this.age = age;
     }
 
@@ -28,20 +31,22 @@ public class Employee {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
+        if (age<18){
+            age = 18;
+        }
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return this.id + "," + this.name + "," + this.age;
+    public String toContent(){
+        return this.id+","+this.name+","+this.age;
     }
-
-    public String show() {
-        return this.id + "\t\t" + this.name + "\t\t" + this.age;
+    @Override
+    public String toString(){
+        return this.id+"\t\t\t"+this.name+"\t\t\t"+this.age;
     }
 }
